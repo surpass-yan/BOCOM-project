@@ -1,0 +1,33 @@
+.container{
+	margin: 5px auto;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: 1px dashed paleturquoise;
+	background:linear-gradient(top right,pink,palegoldenrod,plum);
+}
+
+.container button{
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 60%;
+	cursor: pointer;
+	text-align: center;
+	background-color: palegreen;
+}
+.container p{
+	display: inline-block;
+	font-size: 14px;
+}
+.container p input{
+	width: 50px;
+}
+.container .btn{
+	width: 45px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 0;
+	background-color: cornflowerblue;
+}

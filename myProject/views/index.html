@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>index</title>
+	<style>
+		table {
+			text-align: center;
+		}
+
+		tr {
+			width: 200px;
+			height: 30px;
+		}
+
+		td {
+			width: 50px;
+			vertical-align: middle;
+		}
+
+		i {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			border: 2px solid #fff;
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			border-radius: 50%;
+			box-shadow: 2px 2px 1px #999;
+		}
+
+		.bg0 {
+			background: deepskyblue;
+		}
+
+		.bg1 {
+			background: darkgoldenrod;
+		}
+
+		.bg2 {
+			background: deeppink;
+		}
+
+		.bg3 {
+			background: darkgreen;
+		}
+
+		.bg4 {
+			background: darkgray;
+		}
+
+		.bg5 {
+			background: darkkhaki;
+		}
+
+	</style>
+</head>
+<body>
+<table border="1" cellspacing="0">
+	<caption>渠道覆盖分析</caption>
+	<tbody id="tb">
+	</tbody>
+
+</table>
+
+<script src="../js/jquery.js"></script>
+<script>
+	function getData(callback) {
+		$.ajax({
+			url: '../json/data.json',
+			type: 'GET',
+			dataType: 'json',
+			success: function (result) {
+				if (result.status === 200) {
+					callback(result);
+				}
+			}
+		});
+	}
+
+	getData(bindData);
+
+	function bindData(result) {
+		var str = '';
+		// 外层循环行，有多少个平台就有几行
+		$.each(result.platformsY, function (i, platform) {
+			str += '<tr>';
+			$.each(result.data, function (j, item) {
+				if (j === 0) {
+					// 每一行的第一列，拼上平台的名称
+					str += '<td>' + platform + '</td>';
+				}
+				// 如果每个景点的平台列表（数组）包含该行的平台，就给拼接一个i标签
+				if (item.platforms.indexOf(platform) > -1) {
+					str += '<td><i class="bg' + i + '"></i></td>';
+				} else {
+					str += '<td></td>';
+				}
+			});
+			str += '</tr>';
+		});
+
+		// 最后再加的一行 作为整个列表的X轴，从第二个单元格里填入景点名称
+		str += '<tr>';
+		// 最后一行的第一个单元格空着
+		str += '<td></td>';
+		$.each(result.data, function (j, item) {
+			// 最后一行单元格里接上每个景点的名称
+			str += '<td>' + item['sight'] + '</td>';
+		});
+		str += '</tr>';
+		$('#tb').html(str);
+	}
+</script>
+</body>
+</html>

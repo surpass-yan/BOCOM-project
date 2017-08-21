@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>OTA渠道覆盖分析</title>
+	<link rel="stylesheet" href="../css/reset.min.css">
+	<link rel="stylesheet" href="../css/channelCover.css">
+</head>
+<body>
+<div id="main" class="main">
+	<p>ota渠道覆盖分析</p>
+	<div class="content clear">
+		<!--<ul class="left">-->
+			<!--<li>途牛</li>-->
+			<!--<li>阿里</li>-->
+			<!--<li>马蜂窝</li>-->
+		<!--</ul>-->
+		<ul class="right clear">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>4</li>
+			<li>4</li>
+			<li>4</li>
+			<li>4</li>
+			<li>4</li>
+			<li>4</li>
+			<li>4</li>
+			<li>4</li>
+		</ul>
+		<ul class="bottom clear">
+			<!--<li>龙虎山</li>-->
+			<!--<li>武当山</li>-->
+			<!--<li>三清山</li>-->
+			<!--<li>三清山</li>-->
+		</ul>
+	</div>
+</div>
+<script src="../js/jquery.js"></script>
+<script src="../js/template.js"></script>
+<script src="../js/channelCover.js"></script>
+<script type="text/template" id="myTemplate">
+	{{each matchNum}}
+		<li>{{$value.num}}</li>
+	{{/each}}
+</script>
+</body>
+</html>

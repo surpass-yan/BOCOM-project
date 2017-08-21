@@ -1,0 +1,40 @@
+.main{
+	margin: 10px auto;
+	width: 450px;
+	font-size: 18px;
+}
+.main p{
+	margin: 10px;
+	text-align: center;
+}
+.content .left{
+	float: left;
+	margin:-1px 15px;
+	width: 80px;
+	text-align: center;
+}
+.content .left li{
+	height: 30px;
+}
+.content .right{
+	float: left;
+	width: 330px;
+}
+.content .right li,.content .bottom li{
+	float: left;
+	margin-left: -1px;
+	margin-top: -1px;
+	width: 80px;
+	height: 30px;
+	border: 1px solid black;
+	text-align: center;
+}
+.content .bottom{
+	float: left;
+	margin-top: 10px;
+	margin-left: 103px;
+	height: 30px;
+}
+.content .bottom li{
+	border: none;
+}

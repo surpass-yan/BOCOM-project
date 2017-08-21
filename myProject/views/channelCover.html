@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>渠道覆盖分析</title>
+	<link rel="stylesheet" href="../css/channelCover.css">
+</head>
+<body>
+<table border="1" cellspacing="0">
+	<caption>OTA渠道覆盖分析</caption>
+	<tbody id="tb">
+	</tbody>
+</table>
+<script src="../js/jquery.js"></script>
+<script src="../js/channelCover.js"></script>
+<script>
+	function getData(callback) {
+		$.ajax({
+			url: '../json/data.json',
+			type: 'GET',
+			dataType: 'json',
+			success: function (result) {
+				if (result.status === 200) {
+					callback(result);
+				}
+			}
+		});
+	}
+	getData(bindData);
+</script>
+</body>
+</html>

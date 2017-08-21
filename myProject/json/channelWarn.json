@@ -1,0 +1,38 @@
+{
+  "status":200,
+  "name":"",
+  "data":[
+    {
+      "seq": 0,
+      "regionCode": 0,
+      "scenicId": 0,
+      "platformSeq": 0,
+      "productType": null,
+      "priceDate": null,
+      "minPrice": 0,
+      "retailPrice": 0,
+      "platformPrice": 0,
+      "rowNum": 1,
+      "platformName":"LMM",
+      "abnormalDate":1500825600000,
+      "warningStatement":"组合产品价格低于官网价格10",
+      "warningTime":1500355458000
+    },
+    {
+      "seq": 0,
+      "regionCode": 0,
+      "scenicId": 0,
+      "platformSeq": 0,
+      "productType": null,
+      "priceDate": null,
+      "minPrice": 0,
+      "retailPrice": 0,
+      "platformPrice": 0,
+      "rowNum": 2,
+      "platformName":"XC",
+      "abnormalDate":1500652800000,
+      "warningStatement":"优惠后价格低于官网最低价格",
+      "warningTime":1500528285000
+    }
+  ]
+}

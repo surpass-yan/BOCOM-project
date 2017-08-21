@@ -1,0 +1,13 @@
+table{
+	text-align: center;
+}
+.title{
+	background-color: dodgerblue;
+}
+.serial{
+	width: 80px;
+}
+tr td{
+	width: 150px;
+	height: 30px;
+}

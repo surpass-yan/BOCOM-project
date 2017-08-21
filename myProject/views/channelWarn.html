@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>产品渠道异价预警（龙虎山）</title>
+	<link rel="stylesheet" href="../css/channelWarn.css">
+</head>
+<body>
+<table border="1" cellspacing="0">
+	<thead>
+	<tr class="title">
+		<td class="serial">序号</td>
+		<td>渠道</td>
+		<td>异常日期</td>
+		<td>预警说明</td>
+		<td>预警时间</td>
+	</tr>
+	</thead>
+	<tbody id="content"></tbody>
+</table>
+</body>
+<script src="../js/template.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/channelWarn.js"></script>
+<script>
+	$.ajax({
+		url:'../json/channelWarn.json',
+		type:'GET',
+		dataType:'json',
+		success:function (result) {
+			if(result.status===200){
+				bindData(result);
+			}
+		}
+	});
+</script>
+<script type="text/template" id="myTemplate">
+	{{each matchList}}
+	<tr>
+		<td class="serial">{{$value.rowNum}}</td>
+		<td>{{$value.platformName}}</td>
+		<td>{{$value.abnormalDate}}</td>
+		<td>{{$value.warningStatement}}</td>
+		<td>{{$value.warningTime}}</td>
+	</tr>
+	{{/each}}
+</script>
+</html>

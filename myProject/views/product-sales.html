@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>产品销量监测</title>
+	<link rel="stylesheet" href="../css/reset.min.css">
+	<link rel="stylesheet" href="../css/productSales.css">
+</head>
+<body>
+<div class="container">
+	<button class="day" data-day="7">近7天</button>
+	<button class="day" data-day="30">近30天</button>
+	<button class="day" data-day="90">近90天</button>
+	<button class="day" data-day="180">近180天</button>
+	<p>自定义
+		<input id="day" type="number" class="inp-day" maxlength="3">天
+		<button class="btn confirm">确定</button>
+	</p>
+</div>
+<div id="main" style="width: 100%;height: 400px"></div>
+<script src="../js/echarts.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/productSales.js"></script>
+<script>
+	/**
+	 * @param:
+	 * n[number]:获取的天数
+	 * */
+	function getData(n) {
+		n = n || 7;
+		$.ajax({
+			url: '../json/productSales.json',
+			type: 'GET',
+			dataType: 'json',
+			data: {
+				days: n
+			},
+			success: function (result) {
+				if (result.status === 200) {
+					bindData(result, 'main');
+				}
+			}
+		})
+	}
+
+	// 页面打开时执行一次
+	getData(7);
+
+	// 给三个btn绑定事件
+	$('.day').each(function (index, item) {
+		$(this).click(function () {
+			var n = $(this).data('day');
+			getData(n);
+		})
+	});
+
+	// input框自定义天数
+	$('.confirm').click(function () {
+		var n = $('.inp-day').val();
+		if (!isNaN(Number(n))) {
+			getData(n);
+		} else {
+			alert('请输入有效数字')
+		}
+	});
+</script>
+</body>
+</html>

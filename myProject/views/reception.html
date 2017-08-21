@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>祖山景区游客接待人次</title>
+	<link rel="stylesheet" href="../css/reset.min.css">
+	<link rel="stylesheet" href="../css/reception.css">
+</head>
+<body>
+<div class="outer">
+	<div class="word">
+		<p>祖山景区游客接待人次</p>
+		<span></span>
+	</div>
+	<div class="container">
+		<div class="top">
+			<div class="num first">
+				<span>0</span>
+			</div>
+			<div class="num second">
+				<span>0</span>
+			</div>
+			<div class="num third">
+				<span>0</span>
+			</div>
+			<p class="reception">今日累计接待</p>
+		</div>
+		<div class="bottom clear"></div>
+	</div>
+</div>
+</body>
+<script src="../js/jquery.js"></script>
+<script src="../js/template.js"></script>
+<script src="../js/reception.js"></script>
+<script>
+	$.ajax({
+		url:'../json/reception.json',
+		type:'GET',
+		dataType:'json',
+		success:function (res){
+		  if(res.status==200){
+		  	bindData(res);
+		  }
+		 }
+	});
+</script>
+<script type="text/template" id="myTemplate">
+	{{each matchList}}
+	<div>
+		<p>{{$value.num}}</p>
+		<p class="clo">{{$value.text}}</p>
+	</div>
+	{{/each}}
+</script>
+</html>

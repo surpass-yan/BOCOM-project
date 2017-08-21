@@ -1,0 +1,54 @@
+.analysis{
+	position: absolute;
+	width: 500px;
+	background-color: #022180;
+}
+.analysis p{
+	font-size: 20px;
+	color: #FFF;
+}
+.control{
+	position: absolute;
+	width: 60px;
+	height: 110px;
+	margin-top: -35px;
+	top:50%;
+	bottom: 50%;
+	right:12px;
+}
+.control p{
+	margin-bottom: 10px;
+	font-size: 18px;
+	color: #00dcff;
+	cursor: pointer;
+}
+.control p.active{
+	width: 44px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #2270ff;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+}
+.analysis span{
+	position: absolute;
+	font-size: 16px;
+	color: #00dcff;
+}
+.analysis span:nth-child(2){
+	top:50px;
+	left: 85px;
+}
+.analysis span:nth-child(3){
+	top:50px;
+	left: 270px;
+}
+.analysis span:nth-child(4){
+	top:256px;
+	left: 85px;
+}
+.analysis span:nth-child(5){
+	top:256px;
+	left: 270px;
+}

@@ -1,0 +1,80 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul li{
+	list-style: none;
+
+}
+.clearfix{
+	display: block;
+	content: "";
+	clear: both;
+	*zoom:1;
+}
+h3{
+	margin-left: 5px;
+	font-size: 14px;
+	font-weight: normal;
+}
+.left,.right{
+	margin: 15px auto;
+}
+.left{
+	float: left;
+	margin-right: 5px;
+	width: 200px;
+	height: 120px;
+	font-size: 14px;
+}
+.bg0{
+	background-color: orange;
+	box-shadow: 2px 2px rgba(0,0,0,.3);
+}
+.bg1{
+	background-color: lightblue;
+	box-shadow: 2px 2px rgba(0,0,0,.3);
+}
+ul{
+	height: 15px;
+}
+ul li{
+	list-style: none;
+	float: left;
+	margin-top: 10px;
+	width: 100px;
+	height: 15px;
+	text-align: center;
+}
+.right{
+	float: left;
+	width: 300px;
+	height: 120px;
+	text-align: center;
+}
+table{
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: normal;
+	/*去掉td之间的空隙*/
+	border-collapse:collapse;
+	text-align: right;
+}
+td{
+	text-align: right;
+}
+thead td{
+	width: 85px;
+	height: 25px;
+	border: 1px solid black;
+	margin-right: -5px;
+	background-color: cornflowerblue;
+	color: #fff;
+	text-align: center;
+}
+tbody td{
+	width: 55px;
+	height: 25px;
+	border: 1px solid black;
+	text-align: center;
+}

@@ -1,0 +1,105 @@
+{
+  "status": 200,
+  "indicator": [
+    {
+      "dataName": "LFS",
+      "dataNum": [
+        {
+          "seq": 0,
+          "regionCode": 0,
+          "scenicId": 0,
+          "contrastName": "周边环境",
+          "reputation": 55,
+          "date": null,
+          "reputationMax": 100
+        },
+        {
+          "seq": 0,
+          "regionCode": 0,
+          "scenicId": 0,
+          "contrastName": "其它",
+          "reputation": 65,
+          "date": null,
+          "reputationMax": 100
+        },
+        {
+          "seq": 0,
+          "regionCode": 0,
+          "scenicId": 0,
+          "contrastName": "游客服务",
+          "reputation": 24,
+          "date": null,
+          "reputationMax": 100
+        },
+        {
+          "seq": 0,
+          "regionCode": 0,
+          "scenicId": 0,
+          "contrastName": "景区设施",
+          "reputation": 32,
+          "date": null,
+          "reputationMax": 100
+        },
+        {
+          "seq": 0,
+          "regionCode": 0,
+          "scenicId": 0,
+          "contrastName": "景区卫生",
+          "reputation": 42,
+          "date": null,
+          "reputationMax": 100
+        }
+      ]
+    },
+    {
+      "dataName": "SQS",
+      "dataNum": [
+        {
+          "seq": 0,
+          "regionCode": 0,
+          "scenicId": 0,
+          "contrastName": "周边环境",
+          "reputation": 32,
+          "date": null,
+          "reputationMax": 100
+        },
+        {
+          "seq": 0,
+          "regionCode": 0,
+          "scenicId": 0,
+          "contrastName": "其它",
+          "reputation": 24,
+          "date": null,
+          "reputationMax": 100
+        },
+        {
+          "seq": 0,
+          "regionCode": 0,
+          "scenicId": 0,
+          "contrastName": "游客服务",
+          "reputation": 42,
+          "date": null,
+          "reputationMax": 100
+        },
+        {
+          "seq": 0,
+          "regionCode": 0,
+          "scenicId": 0,
+          "contrastName": "景区设施",
+          "reputation": 65,
+          "date": null,
+          "reputationMax": 100
+        },
+        {
+          "seq": 0,
+          "regionCode": 0,
+          "scenicId": 0,
+          "contrastName": "景区卫生",
+          "reputation": 42,
+          "date": null,
+          "reputationMax": 100
+        }
+      ]
+    }
+  ]
+}

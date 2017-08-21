@@ -1,0 +1,87 @@
+.outer{
+	margin: 10px auto;
+	padding: 0 3px;
+	width: 459px;
+	background-color: #042169;
+}
+.word{
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+}
+.word p{
+	display: inline-block;
+	width: 186px;
+	color: #fff;
+}
+.word span{
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	background: url("../images/recption.png") no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	vertical-align: sub;
+}
+.container{
+	position: relative;
+	width: 100%;
+	height: 210px;
+	line-height: 200px;
+	text-align: center;
+}
+.container .top{
+	position: absolute;
+	top:0;
+	width: 100%;
+	height: 140px;
+}
+.num{
+	position: relative;
+	display: inline-block;
+	margin:25px 10px 5px 20px;
+	width: 50px;
+	height: 70px;
+	background-color: blue;
+}
+.container .top .third{
+	background-color: red;
+}
+.container .top  span{
+	position: absolute;
+	z-index: 10;
+	top:-66px;
+	left: 12px;
+	font-size: 36px;
+	color: #fff;
+}
+
+.container .reception{
+	position: absolute;
+	top:20px;
+	left: 0;
+	right: 0;
+	font-size: 16px;
+	color: #7e77a3;
+}
+.container .bottom{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+}
+.container .bottom div{
+	float: left;
+	width: 33.33%;
+	height: 50px;
+	line-height: 50px;
+}
+.container .bottom div p{
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px;
+	color: #00dcff;
+}
+.container .bottom div .clo{
+	color: #797397;
+}

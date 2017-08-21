@@ -1,0 +1,41 @@
+[
+  {
+    "seq": 0,
+    "otaId": 0.0,
+    "regionCode": 0.0,
+    "scenicId": 0.0,
+    "satisfactionDegree": 38.0,
+    "date": null,
+    "midNum": 2500,
+    "goodNum": 12000,
+    "badNum": 500,
+    "totalNum": 15000,
+    "scenicName": "三青山"
+  },
+  {
+    "seq": 0,
+    "otaId": 0.0,
+    "regionCode": 0.0,
+    "scenicId": 0.0,
+    "satisfactionDegree": 98.0,
+    "date": null,
+    "midNum": 1500,
+    "goodNum": 10000,
+    "badNum": 500,
+    "totalNum": 12000,
+    "scenicName": "武当山"
+  },
+  {
+    "seq": 0,
+    "otaId": 0.0,
+    "regionCode": 0.0,
+    "scenicId": 0.0,
+    "satisfactionDegree": 89.0,
+    "date": null,
+    "midNum": 1500,
+    "goodNum": 13000,
+    "badNum": 500,
+    "totalNum": 15000,
+    "scenicName": "武当"
+  }
+]

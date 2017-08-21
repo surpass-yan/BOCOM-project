@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>龙虎山渠道异价预警</title>
+</head>
+<body>
+<div id="channel_warn" style="width: 800px;height: 500px"></div>
+<script src="../js/jquery.js"></script>
+<script src="../js/echarts.js"></script>
+<script src="../js/channelWarnLHS.js"></script>
+<script>
+    channelWarn("../json/channelWarnLHS.json", $("#channel_warn")[0]);
+</script>
+</body>
+</html>

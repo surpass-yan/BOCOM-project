@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>景区美誉度调查</title>
+	<link rel="stylesheet" href="../css/scenic.css">
+</head>
+<body>
+<div id="main" class="clearfix" style="width: 800px;height: 400px">
+	<h3>景区美誉度分析</h3>
+	<div class="left">
+		<ul class="clearfix">
+			<li></li>
+			<li id="figure">满意度</li>
+		</ul>
+	</div>
+	<div class="right">
+		<table>
+			<thead>
+			<tr>
+				<td>总评价数</td>
+				<td>好评数</td>
+				<td>中评数</td>
+				<td>差评数</td>
+			</tr>
+			</thead>
+			<tbody id="content"></tbody>
+		</table>
+	</div>
+</div>
+</body>
+<script src="../js/jquery.js"></script>
+<script src="../js/template.js"></script>
+<script src="../js/scenic.js"></script>
+<script>
+	$.ajax({
+		url: '../json/scenic.json',
+		type: 'GET',
+		dataType: 'json',
+		success: function (result) {
+			result.length ? bindData(result) : null;
+		}
+	});
+</script>
+<script type="text/template" id="myTemplate">
+	{{each matchList}}
+	<ul class="clearfix">
+		<li>{{$value.scenicName}}</li>
+		<li class="len">
+			<p class="op">{{$value.satisfactionDegree}}%</p>
+		</li>
+	</ul>
+	{{/each}}
+</script>
+
+<script type="text/template" id="right">
+	{{each matchList}}
+	<tr>
+		<td>{{$value.totalNum}}</td>
+		<td>{{$value.goodNum}}</td>
+		<td>{{$value.midNum}}</td>
+		<td>{{$value.badNum}}</td>
+	</tr>
+	{{/each}}
+</script>
+</html>

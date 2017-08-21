@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>秦皇岛影响力分析</title>
+	<link rel="stylesheet" href="../css/reset.min.css">
+	<link rel="stylesheet" href="../css/influence.css">
+</head>
+<body>
+<div class="influence">
+	<p>秦皇岛影响力分析</p>
+	<div id="main" style="width: 258px;height: 199px"></div>
+	<div class="right"></div>
+</div>
+<script src="../js/jquery.js"></script>
+<script src="../js/echarts.js"></script>
+<script src="../js/template.js"></script>
+<script src="../js/influence.js"></script>
+<script>
+	$.ajax({
+		url:'../json/influence.json',
+		type:'GET',
+		dataType:'json',
+		success:function (result){
+			if (result.status ==200) {
+				bindData(result, 'main');
+			}
+		 }
+	})
+</script>
+<script type="text/template" id="myTemplate">
+	{{each matchList}}
+		<ul class="list clearfix">
+			<li>{{$value.dataName}}</li>
+			<p>{{$value.len}}</p>
+			<li class="len"></li>
+		</ul>
+	{{/each}}
+</script>
+</body>
+</html>

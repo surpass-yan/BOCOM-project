@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>京津冀康养旅游市场分析</title>
+	<link rel="stylesheet" href="../css/reset.min.css">
+	<link rel="stylesheet" href="../css/markeAnalysis.css">
+</head>
+<body>
+<div class="analysis">
+	<p>京津冀康养旅游市场分析</p>
+	<span>康养潜力区</span>
+	<span>康养优势区</span>
+	<span>康养弱势区</span>
+	<span>康养探索区</span>
+	<div id="analysis" class="main" style="width: 457px;height:267px;"></div>
+	<div class="control">
+		<p class="active">北京</p>
+		<p>天津</p>
+		<p>河北</p>
+	</div>
+</div>
+<script src="../js/jquery.js"></script>
+<script src="../js/echarts.js"></script>
+<script src="../js/markeAnalysis.js"></script>
+<script>
+	//	获取数据
+	$.ajax({
+		url: '../json/markeAnalysis.json',
+		type: 'GET',
+		dataType: 'json',
+		success: function (result) {
+			if (result.status == 200) {
+				bindData(result, 'analysis');
+				//点击按钮切换
+				var oDiv = document.getElementsByClassName('control');
+				var oPs = oDiv[0].getElementsByTagName('p');
+				$.each(oPs, function (index, item) {
+					item.onclick = function () {
+						$(this).attr("class", "active");
+						$(this).siblings().removeClass('active');
+						if($(this).text()=='北京'){
+							$.ajax({
+								url:'../json/markeAnalysis.json',
+								type: 'GET',
+								dataType: 'json',
+								success:function (result){
+									bindData(result,'analysis');
+								}
+							})
+						}else if($(this).text()=='天津'){
+							$.ajax({
+								url:'../json/tjData.json',
+								type: 'GET',
+								dataType: 'json',
+								success:function (result){
+								  bindData(result,'analysis');
+								 }
+							})
+						}else if($(this).text()=='河北'){
+							$.ajax({
+								url:'../json/tjData.json',
+								type: 'GET',
+								dataType: 'json',
+								success:function (result){
+									bindData(result,'analysis');
+								}
+							})
+						}
+					}
+				})
+			}
+		}
+	});
+</script>
+</body>
+</html>
